@@ -1,0 +1,13 @@
+<% provide(:title, 'Archive') %>
+<h1>Pages#archive</h1>
+
+<div class="gridGallery">
+	
+	<% @works.each do |work| %>
+		
+			<%= link_to (image_tag work.artwork.url(:thumb)), view_path(work) %>
+		
+	<% end %>
+	
+</div>
+

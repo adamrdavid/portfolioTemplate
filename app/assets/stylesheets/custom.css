@@ -1,0 +1,127 @@
+.container
+{
+	width: 710px;
+	padding-right: 20px;
+}
+
+body
+{
+	background: #cff;
+}
+
+header
+{
+/*	padding: 10px;
+*/	background: #0ff;
+}
+
+section
+{
+	font-size: 120%;
+	padding: 10px;
+	background: #fff;
+	
+}
+
+/* Links */
+nav a{
+	color: #09c;
+	text-decoration: none;
+	padding: .4em;
+}
+
+nav a:hover{
+	color: #069;
+	text-decoration: underline;
+}
+
+nav a:visited{
+	color: #069;
+
+}
+
+/* nav */
+
+.sidebar{
+	position: absolute;
+	top: 140px;
+	left: 0px;
+	background: #f0f;
+	padding: 10px;
+}
+
+nav{
+	
+	padding-top: .1em;
+	padding-bottom: .2em;
+	background: #fff;
+
+}
+
+nav ul{
+	padding: 10px;
+	list-style: none;
+	text-align: left;
+}
+
+nav ul li{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin-right: 10px;
+	text-align: left;
+	font-size: 140%;
+}
+
+/* Logo */
+.logo{
+	padding-left: 0.6em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 400%;
+}
+
+
+/* Content */
+.content{
+	position: absolute;
+	left: 160px;
+	margin-right: 140px;
+	top: 140px;
+	padding: 10px;
+	background: #ff0;
+}
+
+.content img{
+	padding-bottom: 4px;
+}
+.content a:hover{
+	background: none;
+	opacity: .7;
+}
+
+/* big view */
+.thingy{
+	max-width: 820px;
+	/*margin-right: 10px;*/
+}
+
+/*a img:hover{
+	text-decoration: none;
+	border-style: solid;
+	border-width: 4px;
+	border-color: red;
+}*/
+/* Grid Layout */
+/*.floater{
+	height: 100%;
+	white-space: nowrap;
+}*/
+
+/*.fileField{
+	padding: 10px;
+	opacity: 90;
+}*/
+/*.field{
+	padding: 10px;
+}*/

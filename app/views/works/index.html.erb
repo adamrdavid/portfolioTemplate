@@ -1,0 +1,34 @@
+<% provide(:title, 'View Works') %>
+<h1>Listing works</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Created on</th>
+    <th>Collection</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @works.each do |work| %>
+  <tr>
+    <td><%= work.title %></td>
+    <td><%= work.description %></td>
+    <td><%= work.price %></td>
+    <td><%= work.created_on %></td>
+    <td><%= work.collection %></td>
+    <td><%= image_tag work.artwork.url(:thumb) %></td>
+    <td><%= link_to 'Show', work %></td>
+    <td><%= link_to 'Edit', edit_work_path(work) %></td>
+    <td><%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Work', new_work_path %>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> <%= full_title(yield(:title)) %> </title>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+  
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<p class="logo">
+				logo goes here
+			</p>
+		</header>
+
+		<div class="sidebar">
+			<nav class="round">
+				<ul>
+					<li id="navLink"> <%= link_to "Home", root_path %> </li>
+					<li id="navLink"> <%= link_to "Archive", archive_path %> </li>
+					<li id="navLink"> <%= link_to "CV", cv_path %> </li>
+					<li id="navLink"> <%= link_to "About", about_path %> </li>
+					<li id="navLink"> <%= link_to "Contact", contact_path %> </li>
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="content">
+			<section>
+				<%= yield %>
+			</section>
+		</div>
+		
+	</div>
+
+</body>
+</html>

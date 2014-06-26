@@ -1,0 +1,48 @@
+<% provide(:title, 'Archive') %>
+
+<h1>Pages#archive</h1>
+
+<div class="gridGallery">
+	
+	<p>
+	  <b>Title:</b>
+	  <%= @work.title %>
+	</p>
+
+	<p>
+	  <b>Description:</b>
+	  <%= @work.description %>
+	</p>
+
+	<p>
+	  <b>Price:</b>
+	  <%= @work.price %>
+	</p>
+
+	<p>
+	  <b>Created on:</b>
+	  <%= @work.created_on %>
+	</p>
+
+	<p>
+	  <b>Image:</b> <br />
+	  	<% if true==true %>
+	  		<%= image_tag(@work.artwork.url, class: "thingy") %>
+	 	<% else %>
+	 		<%= image_tag(@work.artwork.url, class: "thingy") %>
+	 	<% end %>
+	  
+	</p>
+	
+</div>
+
+<p>
+  <%= link_to 'Back', archive_path %>
+</p>
+
+<script type="text/javascript">
+	function getImageWidth(){
+
+	}
+</script>
+

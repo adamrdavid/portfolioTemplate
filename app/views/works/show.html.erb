@@ -1,0 +1,33 @@
+<% provide(:title, 'Show Work') %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @work.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @work.description %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @work.price %>
+</p>
+
+<p>
+  <b>Created on:</b>
+  <%= @work.created_on %>
+</p>
+
+<p>
+  <b>Image:</b> <br />
+  <%= image_tag @work.artwork.url %>
+  <%= image_tag @work.artwork.url(:medium) %>
+  <%= image_tag @work.artwork.url(:thumb) %>
+</p>
+
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>
