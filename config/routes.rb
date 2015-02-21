@@ -2,19 +2,19 @@ MyNewSite::Application.routes.draw do
   #get "pages/home"
 
   #get "pages/archive"
-  match 'archive' => 'pages#archive', :as => :archive
+  get 'archive' => 'pages#archive', :as => :archive
 
   #get "pages/cv"
-  match 'cv' => 'pages#cv', :as => :cv
+  get 'cv' => 'pages#cv', :as => :cv
 
   #get "pages/about"
-  match 'about' => 'pages#about', :as => :about
+  get 'about' => 'pages#about', :as => :about
 
   #get "pages/contact"
-  match 'contact' => 'pages#contact', :as => :contact
+  get 'contact' => 'pages#contact', :as => :contact
 
   # view page
-  match "view" => 'pages#view', :as => :view
+  get "view" => 'pages#view', :as => :view
 
   resources :works
 

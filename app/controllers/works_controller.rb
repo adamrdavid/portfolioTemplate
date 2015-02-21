@@ -1,4 +1,5 @@
 class WorksController < ApplicationController
+  before_action :set_work, only: [:show, :edit, :update, :destroy]
   # GET /works
   # GET /works.json
   def index
@@ -13,7 +14,7 @@ class WorksController < ApplicationController
   # GET /works/1
   # GET /works/1.json
   def show
-    @work = Work.find(params[:id])
+    #@work = Work.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,13 +35,13 @@ class WorksController < ApplicationController
 
   # GET /works/1/edit
   def edit
-    @work = Work.find(params[:id])
+    #@work = Work.find(params[:id])
   end
 
   # POST /works
   # POST /works.json
   def create
-    @work = Work.new(params[:work])
+    @work = Work.new(work_params)
 
     respond_to do |format|
       if @work.save
@@ -56,10 +57,10 @@ class WorksController < ApplicationController
   # PUT /works/1
   # PUT /works/1.json
   def update
-    @work = Work.find(params[:id])
+    #@work = Work.find(params[:id])
 
     respond_to do |format|
-      if @work.update_attributes(params[:work])
+      if @work.update_attributes(work_params)
         format.html { redirect_to @work, notice: 'Work was successfully updated.' }
         format.json { head :no_content }
       else
@@ -72,7 +73,7 @@ class WorksController < ApplicationController
   # DELETE /works/1
   # DELETE /works/1.json
   def destroy
-    @work = Work.find(params[:id])
+    #@work = Work.find(params[:id])
     @work.destroy
 
     respond_to do |format|
@@ -80,4 +81,18 @@ class WorksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  #private
+  private
+
+  def work_params
+      params.require(:work).permit(:title, :description, :price, :created_on, :created_at, :updated_at,
+                                   :medium, :artwork_file_name, :artwork_content_type, :artwork_file_size,
+                                   :artwork_updated_at, :year, :collection)
+  end
+
+  def set_work
+    @work = Work.find(params[:id])
+  end
+
 end

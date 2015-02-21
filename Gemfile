@@ -6,7 +6,7 @@ gem "paperclip", "~> 4.0.0"
 
 ###############
 
-gem 'rails', '3.2.16'
+gem 'rails', '4.1.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -16,19 +16,24 @@ gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails',   '~> 4.0'
+  gem 'coffee-rails', '~> 4.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
-end
+  gem 'uglifier', '>= 1.3.0'
+
+  # Upgrade to rails 4 support stack
+  #gem 'protected_attributes'
+  gem 'rails-observers'
+  gem 'actionpack-action_caching'
+  gem 'actionpack-page_caching'
+  #gem 'activerecord-deprecated_finders'
+
 
 gem 'jquery-rails'
 
-#gem 'rmagick'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

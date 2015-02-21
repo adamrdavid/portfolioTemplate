@@ -15,6 +15,45 @@ header
 */	background: #0ff;
 }
 
+/* Logo */
+.logo{
+	padding-left: 0.6em;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* simple sidebar menu */
+
+.sidebar ul {
+    margin: 0; 
+    padding: 0;
+    width:160px;
+    list-style-type: none;
+    margin-top: 120px; /*make room for header*/
+}
+
+ /* links */
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 140%;
+    color: white; 
+    padding: 10.5px 11px;
+    background-color: #005555;
+    display:block;
+}
+ 
+.sidebar ul li a:visited {
+    color: white;
+}
+ 
+.sidebar ul li a:hover, .sidebar ul li .current {
+    color: white;
+    background-color: #5FD367;
+}
+
+
+/* section */
 section
 {
 	font-size: 120%;
@@ -23,71 +62,12 @@ section
 	
 }
 
-/* Links */
-nav a{
-	color: #09c;
-	text-decoration: none;
-	padding: .4em;
-}
-
-nav a:hover{
-	color: #069;
-	text-decoration: underline;
-}
-
-nav a:visited{
-	color: #069;
-
-}
-
-/* nav */
-
-.sidebar{
-	position: absolute;
-	top: 140px;
-	left: 0px;
-	background: #f0f;
-	padding: 10px;
-}
-
-nav{
-	
-	padding-top: .1em;
-	padding-bottom: .2em;
-	background: #fff;
-
-}
-
-nav ul{
-	padding: 10px;
-	list-style: none;
-	text-align: left;
-}
-
-nav ul li{
-	padding-top: 1em;
-	padding-bottom: 1em;
-	margin-right: 10px;
-	text-align: left;
-	font-size: 140%;
-}
-
-/* Logo */
-.logo{
-	padding-left: 0.6em;
-	position: absolute;
-	top: 0;
-	left: 0;
-	font-size: 400%;
-}
-
-
 /* Content */
 .content{
 	position: absolute;
-	left: 160px;
+	top: 120px;
+	left: 180px;
 	margin-right: 140px;
-	top: 140px;
 	padding: 10px;
 	background: #ff0;
 }
