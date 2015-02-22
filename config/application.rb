@@ -10,6 +10,9 @@ module MyNewSite
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    #static assets for heroku
+    config.serve_static_assets = true
+
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
 
